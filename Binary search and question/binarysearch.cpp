@@ -24,7 +24,7 @@ int  BinarySearch(int arr[],int n,int key){
     cout<<"Enter the size of array: ";
     cin>>n;
     cout<<"Enter the element";
-    for(int i=0;i<=n;i++){
+    for(int i=0;i<n;i++){
         cin>>arr[i];
     
     }
