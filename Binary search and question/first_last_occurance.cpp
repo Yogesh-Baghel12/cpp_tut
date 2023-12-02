@@ -1,6 +1,8 @@
 #include<iostream>
+#include<vector>
 using namespace std;
-int  Search(int arr[],int n,int key){
+
+int Search(int arr[],int n,int key){
     int start=0;
     int end=n-1;
     int last=-1;
@@ -16,8 +18,12 @@ int  Search(int arr[],int n,int key){
         else
             end=mid-1;
     }
-    start=0;
-    end=n-1;
+   return first;
+}
+int lSearch(int arr[],int n,int key){
+    int start=0;
+    int end=n-1;
+    int last=-1;
     while (start<=end) {
         int mid = start+(end-start/2);
         if(arr[mid]==key){
@@ -29,11 +35,9 @@ int  Search(int arr[],int n,int key){
         else
             end=mid-1;
     }
-    return first , last; 
+   return last;
 
 }
-
-
 int main(){
     int n,arr[1000];
     cout<<"Enter the size of array: ";
@@ -46,7 +50,8 @@ int main(){
     int key;
     cout<<"Finding which key:";
     cin>>key;
-    cout << Search(arr,n,key);
+    cout <<"firsrt Occurance is :"<<Search(arr,n,key)<<endl;
+    cout <<"last occurance is :"<<lSearch(arr,n,key);
     return 0;
 
  }
