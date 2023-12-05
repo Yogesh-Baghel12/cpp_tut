@@ -16,7 +16,6 @@ int Search_insert(int arr[],int n,int key){
         else{
             ans=mid;
             end=mid-1;
-            break;
         }
             
     }
